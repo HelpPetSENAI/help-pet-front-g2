@@ -4,7 +4,37 @@
 > Preencha as tópicos vazios desse readme de acordo com a função do seu grupo e faça alterações na seção estrutura de pastas conforme sejam feitas alterações.
 
 ## Como rodar o projeto
-Clonando este repositório basta entrar na pasta utilizando sua IDE de preferência basta iniciar o projeto no terminal com o comando `` npm start `` para rodar localmente.
+Clonando este repositório basta entrar na pasta utilizando sua IDE de preferência, abrir o terminal, instalar as depêndencias do projeto com o commando `` npm install `` e iniciar com `` npm run dev `` para rodar localmente.
+
+## Estrutura das pastas
+```
+├── .github/
+│   └── PULL_REQUEST_TEMPLATE.md
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   ├── icons/
+│   │   │   └── .gitkeep
+│   │   └── images/
+│   │       └── .gitkeep
+│   ├── components/
+│   │   └── .gitkeep
+│   ├── pages/
+│   │   └── .gitkeep
+│   ├── styles/
+│   │   └── reset.css
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── README.md
+└── vite.config.js
+```
+
 ## Convenção de nomenclatura
 > Padrão de nomeação que deve ser seguido em todas as etapas de desenvolvimento.
 
