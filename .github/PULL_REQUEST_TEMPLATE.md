@@ -19,7 +19,7 @@ Bem-vindo(a) a Pull Request deste repositório! Preencha os campos abaixo antes 
 ---
 
 ## Como testar
-<!-- Passos para fazer alterções neste repositório -->
+<!-- Passos para fazer alterações neste repositório -->
 
 Supondo que foi seguido os padrões no readme da organização execute os seguintes passos:
    1. Abra a branch que foram feitas as alterações.
@@ -41,12 +41,12 @@ Supondo que foi seguido os padrões no readme da organização execute os seguin
 
 ---
 ## Checklist *
-- [ ] Verifiquei se este PR segue o padrão descrito no readme da organização.
-- [ ] Verifiquei se os arquivos seguem o padrão de nomeação do readme deste repositório.
-- [ ] Adicionei informações as seções obrigatórias.(com * no título)
-- [ ] Removi as seções que não precisei preencher.
-- [ ] Adicionei prints ou evidências à seção abaixo.(se necessário)
-- [ ] Testei localmente e está funcionando como esperado.
+- [] Verifiquei se este PR segue o padrão descrito no readme da organização.
+- [] Verifiquei se os arquivos seguem o padrão de nomeação do readme deste repositório.
+- [] Adicionei informações as seções obrigatórias (com * no título).
+- [] Removi as seções que não precisei preencher.
+- [] Adicionei prints ou evidências à seção abaixo (se necessário).
+- [] Testei localmente e está funcionando como esperado.
 
 ---
 
