@@ -102,3 +102,38 @@
 
     }
   ```
+
+## Requisitos
+<!-- Requisitos funcionais e não funcionais apenas do seu grupo -->
+### Funcionais - G1
+
+### Não funcionais -G1
+ 
+### Funcionais - G2
+
+### Não funcionais -G2
+ 
+### Funcionais - G3
+
+### Não funcionais -G3
+ 
+### Funcionais - G4
+
+### Não funcionais -G4
+ 
+### Funcionais - G5
+
+### Não funcionais -G5
+ 
+### Funcionais - G6
+
+### Não funcionais -G6
+ 
+### Funcionais - G7
+
+### Não funcionais -G7
+ 
+### Funcionais - G8
+
+### Não funcionais -G8
+ 
