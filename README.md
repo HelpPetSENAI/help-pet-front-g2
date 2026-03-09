@@ -29,11 +29,15 @@
 │   │   └── images/
 │   │       └── .gitkeep
 │   ├── components/
-│   │   └── .gitkeep
+│   │   ├── Button
+│   │   │   ├── Button.jsx
+│   │   │   └── ButtonStyles.jsx
+│   │   └── Fragment.jsx
 │   ├── pages/
-│   │   └── .gitkeep
+│   │   ├── CommingSoonPage.jsx
+│   │   └── NotFoundPage.jsx
 │   ├── styles/
-│   │   └── reset.css
+│   │   └── GlobalStyle.jsx
 │   ├── App.jsx
 │   └── main.jsx
 ├── .gitignore
