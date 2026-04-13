@@ -1,6 +1,6 @@
-import {PetHeaderStyles} from "./PetHeader.js";
+import {PetHeaderStyles} from "./style.js";
 
-function PetHeader() {
+function Index() {
 
     return (
         <PetHeaderStyles>
@@ -9,4 +9,4 @@ function PetHeader() {
     );
 }
 
-export default PetHeader;
+export default Index;
