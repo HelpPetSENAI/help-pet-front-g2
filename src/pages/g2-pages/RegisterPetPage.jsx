@@ -1,11 +1,10 @@
-import PetHeader from "./components/PetHeader.jsx";
+import Header from "./components/pet-header/Header.jsx";
 
 function RegisterPetPage() {
 
-
     return (
         <>
-            <PetHeader />
+            <Header />
         </>
     );
 }
