@@ -1,6 +1,7 @@
 import * as S from "./style.js";
-import HelpPetLogo from "../../assets/images/HelpPetLogo.jsx";
-import LeftArrowIcon from "../../assets/icons/left-arrow-vector.svg"
+import HelpPetLogo from "../../assets/icons/HelpPetLogo.jsx";
+import HelpPetLogoText from "../../assets/icons/HelpPetLogoText.jsx";
+import LeftArrow from "../../assets/icons/LeftArrow.jsx";
 
 function Header() {
 
@@ -8,9 +9,9 @@ function Header() {
         <S.PetHeader>
             <S.LogoContainer>
                 <HelpPetLogo />
-                <S.LogoText>HelpPet</S.LogoText>
+                <HelpPetLogoText />
             </S.LogoContainer>
-            <img src={LeftArrowIcon} alt="arrow-left"/>
+            <LeftArrow />
         </S.PetHeader>
     );
 }
