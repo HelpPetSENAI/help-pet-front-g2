@@ -7,9 +7,11 @@ function RegisterPetPage() {
         <S.Container>
             <Header />
             <S.MainContent>
-                <S.FormTitle>Cadastrar uma nova doação</S.FormTitle>
+                <S.TitleH1>Cadastrar uma nova doação</S.TitleH1>
                 <S.Form>
-
+                    <S.TitleH2>Como o bicho se chama</S.TitleH2>
+                    <S.Input />
+                    <S.TitleH2>O que ele é</S.TitleH2>
                 </S.Form>
             </S.MainContent>
         </S.Container>
