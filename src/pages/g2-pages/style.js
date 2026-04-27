@@ -39,7 +39,7 @@ export const Form = styled.form`
     align-self: stretch;
 `;
 
-export const Input = styled.input`
+export const TextInput = styled.input`
     display: flex;
     height: 80px;
     padding: 12px;
@@ -52,3 +52,35 @@ export const Input = styled.input`
     background: var(--crl-neutral-100, #FFF);
     box-shadow: 2px 2px 0 0 var(--crl-neutral-1000, #000);
 `;
+
+export const NumberInput = styled.input.attrs( {type: 'number'} )`
+    
+`;
+
+export const ButtonWrapper = styled.div`
+
+`;
+
+export const PetCheckInput = styled.input `
+    display: none;
+`;
+
+export const PetLabel = styled.label`
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+`;
+
+export const AgeWrapper = styled.div``;
+
+export const WeightWrapper = styled.div``;
+
+export const GenderWrapper = styled.div``;
+
+export const AddressWrapper = styled.div``;
+
