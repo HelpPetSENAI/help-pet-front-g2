@@ -1,16 +1,16 @@
 import Header from "./components/pet-header/Header.jsx";
 import * as S from "./style.js";
 import CheckIcon from "./assets/icons/CheckIcon.jsx";
-import DogTag from "./components/TagsComponents/Dog.jsx";
-import CatTag from "./components/TagsComponents/Cat.jsx";
-import BirdTag from "./components/TagsComponents/Bird.jsx";
-import RodentsTag from "./components/TagsComponents/Rodents.jsx";
-import AmphibianTag from "./components/TagsComponents/Amphibian.jsx";
-import ArachnidTag from "./components/TagsComponents/Arachnid.jsx";
-import ReptilesTag from "./components/TagsComponents/Reptiles.jsx";
-import CnidariaTag from "./components/TagsComponents/Cnidaria.jsx";
-import FishTag from "./components/TagsComponents/Fish.jsx";
-import DefaultTag from "./components/TagsComponents/DefaultTag.jsx";
+import DogTag from "./components/tags-components/Dog.jsx";
+import CatTag from "./components/tags-components/Cat.jsx";
+import BirdTag from "./components/tags-components/Bird.jsx";
+import RodentsTag from "./components/tags-components/Rodents.jsx";
+import AmphibianTag from "./components/tags-components/Amphibian.jsx";
+import ArachnidTag from "./components/tags-components/Arachnid.jsx";
+import ReptilesTag from "./components/tags-components/Reptiles.jsx";
+import CnidariaTag from "./components/tags-components/Cnidaria.jsx";
+import FishTag from "./components/tags-components/Fish.jsx";
+import DefaultTag from "./components/tags-components/DefaultTag.jsx";
 import {useState} from "react";
 import axios from 'axios';
 
@@ -137,7 +137,6 @@ function RegisterPetPage() {
         }
     };
 
-    // Calcula anos e meses para exibição
     const displayYears = Math.floor(formData.ageMonths / 12);
     const displayMonths = formData.ageMonths % 12;
 
