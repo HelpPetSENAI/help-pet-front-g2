@@ -5,82 +5,130 @@ export const Container = styled.div`
 `;
 
 export const MainContent = styled.main`
+    display: flex;
+    font-family: var(--primary-font), sans-serif;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0;
+    
     border-radius: 30px 30px 0 0;
     border: 2px solid var(--clr-green-1000, #061407);
     background: var(--crl-neutral-100, #FFF);
 `;
 
+export const Form = styled.form`
+    display: flex;
+    width: 80%;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 16px;
+`;
+
 export const TitleH1 = styled.h1`
     color: var(--crl-green-1000, #061407);
-    font-family: var(--primary-font);
+    font-family: var(--main-font), sans-serif;
     text-align: center;
     font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 100%; /* 40px */
 `;
 
 export const TitleH2 = styled.h2`
     color: #000;
-    font-family: var(--main-font);
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    padding-bottom: 4px;
 `;
 
-export const Form = styled.form`
-    display: flex;
-    max-width: 1080px;
-    padding: 0 20px;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    align-self: stretch;
-`;
 
-export const TextInput = styled.input`
-    display: flex;
-    height: 80px;
+export const TextInput = styled.input.attrs( {placeholder: 'Digite Aqui'} )`
     padding: 12px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    align-self: stretch;
-
+    font-size: 18px;
     border: 2px solid var(--crl-neutral-1000, #000);
     background: var(--crl-neutral-100, #FFF);
     box-shadow: 2px 2px 0 0 var(--crl-neutral-1000, #000);
+    transition: all 0.2s;
+    
+    &:focus {
+        outline: none;
+        box-shadow: 4px 4px 0 0 var(--crl-neutral-1000, #000);
+        transform: translate(-2px, -2px);
+    }
 `;
 
-export const NumberInput = styled.input.attrs( {type: 'number'} )`
-    
+export const NumberInput = styled.input.attrs({
+    type: 'number',
+    min: 0,
+    max: 120,
+})`
+    padding: 12px 16px;
+    font-size: 12px;
+    border: 2px solid var(--crl-neutral-1000, #000);
+    border-radius: 0;
+    background: #ffffff;
+    box-shadow: 2px 2px 0px var(--crl-neutral-1000, #000);
+    transition: all 0.2s;
+
+    &:focus {
+        outline: none;
+        box-shadow: 4px 4px 0px var(--crl-neutral-1000, #000);
+        transform: translate(-2px, -2px);
+    }
 `;
 
 export const ButtonWrapper = styled.div`
-
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 `;
 
-export const PetCheckInput = styled.input `
+export const PetCheckInput = styled.input.attrs({ type: 'checkbox' }) `
     display: none;
 `;
 
 export const PetLabel = styled.label`
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border: 2px solid #ccc;
-    border-radius: 5px;
     cursor: pointer;
-    transition: all 0.3s;
-    
+    transition: all 0.2s;
+    display: inline-block;
+
+    input:checked + & {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+    }
+
+    &:hover {
+        transform: translate(-1px, -1px);
+    }
 `;
 
-export const AgeWrapper = styled.div``;
-
-export const WeightWrapper = styled.div``;
-
-export const GenderWrapper = styled.div``;
+export const AgeWrapper = styled.div`
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    gap: 8px;
+    
+    p {
+        font-size: 16px;
+    }
+`;
 
 export const AddressWrapper = styled.div``;
 
+export const DonationButton = styled.button `
+    display: flex;
+    align-self: center;
+    width: 160px;
+    font-family: var(--main-font), sans-serif;
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    border: 2px solid var(--crl-green-1000, #061407);
+    background: var(--crl-green-500, #39C442);
+
+    box-shadow: 2px 2px 0 0 var(--crl-green-1000, #061407);
+`;
