@@ -44,7 +44,6 @@ export const DockButton = styled.button`
 
   &:hover {
     transform: translateY(-1px);
-    background: rgba(255, 255, 255, 0.18);
   }
 
   img {
@@ -58,7 +57,6 @@ export const DockButton = styled.button`
   }
 
   &.active {
-    background: rgba(255, 255, 255, 0.25);
     border-radius: 10px;
   }
 `
