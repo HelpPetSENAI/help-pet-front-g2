@@ -1,22 +1,20 @@
 import styled from "styled-components";
 import DogTag from "../tags-components/Dog.jsx";
 
-function DonationCard() {
+function DonationCard({url, name, size, breed}) {
 
     return (
         <CardContainer>
             <TagWrapper>
                 <DogTag/>
             </TagWrapper>
-            <PetImgContainer>
-            {/*  Foto  */}
-            </PetImgContainer>
+            <PetImgContainer src={url} alt={`${name}-photo`}/>
+                {/*<img src={url} alt={`${name}-photo`} />*/}
             <CardDescription>
-                <h2>Nome do Pet</h2>
+                <h2>{name}</h2>
                 <CardDescriptionWrapper>
-                    <p>Porte</p>
-                    <p>Raça</p>
-                    <p>Localização (em km)</p>
+                    <p>{size}</p>
+                    <p>{breed}</p>
                 </CardDescriptionWrapper>
             </CardDescription>
         </CardContainer>
@@ -41,14 +39,10 @@ export const CardContainer = styled.div`
 `;
 
 export const PetImgContainer = styled.img`
-    display: flex;
     height: 152px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
     align-self: stretch;
-
+    object-fit: cover;
     border-radius: 12px;
     border: 2px solid var(--crl-neutral-1000, #000);
     background: var(--crl-neutral-200, #E3E3E3);
