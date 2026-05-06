@@ -25,7 +25,6 @@ function RegisterPetPage() {
         gender: '',
         description: '',
         cep: '',
-        url: '',
         userId: 1
     });
 
@@ -65,7 +64,6 @@ function RegisterPetPage() {
                 specie: formData.specie,
                 breed: formData.breed || null,
                 ageMonths: formData.ageMonths,
-                url: formData.url,
                 size: formData.size,
                 weight: parseFloat(formData.weight) || 0,
                 gender: formData.gender,
@@ -119,7 +117,6 @@ function RegisterPetPage() {
                 gender: '',
                 description: '',
                 cep: '',
-                url: '',
                 userId: 1
             });
             setPhotos([]);
@@ -378,7 +375,7 @@ function RegisterPetPage() {
                             <S.TextInput
                                 value={formData.cep}
                                 onChange={(e) => handleInputChange('cep', e.target.value)}
-                                maxLength="9"
+                                maxLength="8"
                                 placeholder="00000-000"
                                 required
                             />
