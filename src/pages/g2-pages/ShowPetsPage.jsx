@@ -1,6 +1,6 @@
 import Header from "./components/pet-header/Header.jsx";
 import * as S from "./style.js";
-import DonationCard from "./components/DonationCard/DonationCard.jsx";
+import DonationCard from "./components/donation-card/DonationCard.jsx";
 
 function RegisterPetPage() {
 
@@ -9,7 +9,7 @@ function RegisterPetPage() {
             <Header/>
 
             <S.MainContent>
-                <DonationCard />
+                <DonationCard name="Caliça" breed="Pastora" size="Grandi" url="https://waggys.pet/cdn/shop/articles/pastor_aleman.webp?v=1770167508"/>
             </S.MainContent>
         </S.Container>
     );
