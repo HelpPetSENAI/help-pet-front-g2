@@ -1,10 +1,26 @@
 import styled from "styled-components";
 import SpecieTag from "../tags-components/SpecieTag.jsx";
+import { useNavigate } from "react-router-dom";
 
-function DonationCard({url, name, size, breed, specie}) {
+function DonationCard({id, url, name, size, breed, specie}) {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/petPage/${id}`);
+    };
+
+    const translateSize = (sizeEnum) => {
+        const sizes = {
+            'SMALL': 'Pequeno',
+            'MEDIUM': 'Médio',
+            'LARGE': 'Grande'
+        };
+        return sizes[sizeEnum] || sizeEnum;
+    };
 
     return (
-        <CardContainer>
+        <CardContainer onClick={handleClick}>
             <TagWrapper>
                 <SpecieTag specie={specie}/>
             </TagWrapper>
@@ -12,7 +28,7 @@ function DonationCard({url, name, size, breed, specie}) {
             <CardDescription>
                 <h2>{name}</h2>
                 <CardDescriptionWrapper>
-                    <p>{size}</p>
+                    <p>{translateSize(size)}</p>
                     <p>{breed}</p>
                 </CardDescriptionWrapper>
             </CardDescription>
@@ -20,7 +36,7 @@ function DonationCard({url, name, size, breed, specie}) {
     );
 }
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.a`
     position: relative;
     display: flex;
     width: 315px;
@@ -29,6 +45,7 @@ export const CardContainer = styled.div`
     align-items: flex-end;
     gap: 16px;
     font-family: var(--main-font), sans-serif;
+    cursor: pointer;
 
     border-radius: 20px;
     border: 2px solid var(--crl-red-1000, #160404);

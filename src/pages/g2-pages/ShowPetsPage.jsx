@@ -2,11 +2,12 @@ import Header from "./components/pet-header/Header.jsx";
 import * as S from "./style.js";
 import DonationCard from "./components/donation-card/DonationCard.jsx";
 import axios from "axios";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 function ShowPetPage() {
 
-    const token = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0ZUBleGVtcGxvLmNvbSIsInVzZXJJZCI6MiwiaWF0IjoxNzc5MDU2NjYxLCJleHAiOjE3NzkwNjAyNjF9.0SduykTfyQqTFnG9jXGv_BiaPYhZ52bO3bgZiws696Er6Y9e7GMIKtaMIon0KnuE";
+    const token = "";
+    const [donations, setDonations] = useState([]);
 
     useEffect(() => {
         axios.get("http://localhost:8080/donations/viewAll", {
@@ -15,21 +16,29 @@ function ShowPetPage() {
             }
         })
             .then(response => {
-                console.log(response);
+                setDonations(response.data);
+            })
+            .catch(error => {
+                console.error("Erro ao buscar doações:", error);
             });
+
     }, []);
 
     return (
         <S.Container>
             <Header/>
             <S.MainContent>
-                <DonationCard
-                    specie="DOG"
-                    name="Caliça"
-                    breed="Pastora"
-                    size="Grandi"
-                    url="https://waggys.pet/cdn/shop/articles/pastor_aleman.webp?v=1770167508"
-                />
+                {donations.map((donation) => (
+                    <DonationCard
+                        key={donation.id}
+                        id={donation.id}
+                        specie={donation.specie}
+                        name={donation.name}
+                        breed={donation.breed}
+                        size={donation.size}
+                        url={donation.photos && donation.photos.length > 0 ? donation.photos[0] : "https://via.placeholder.com/150"}
+                    />
+                ))}
             </S.MainContent>
         </S.Container>
     );
