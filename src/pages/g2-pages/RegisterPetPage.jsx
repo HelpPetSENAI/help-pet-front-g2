@@ -48,7 +48,7 @@ function RegisterPetPage() {
         e.preventDefault();
         setLoading(true);
 
-        const token = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbm5AZ21haWwuY29tIiwidXNlcklkIjozLCJpYXQiOjE3Nzg1MDY5MjAsImV4cCI6MTc3ODUxMDUyMH0.qjp4wsy6bP1EYASI0dpB_LQ353VoUMGcL1Ygp94aC4MljzaHtwARYSeEntEbQMOB";
+        const token = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ0ZXN0ZUBleGVtcGxvLmNvbSIsInVzZXJJZCI6MiwiaWF0IjoxNzc5MDU2NjYxLCJleHAiOjE3NzkwNjAyNjF9.0SduykTfyQqTFnG9jXGv_BiaPYhZ52bO3bgZiws696Er6Y9e7GMIKtaMIon0KnuE";
 
         try {
             const donationData = {
@@ -90,7 +90,8 @@ function RegisterPetPage() {
                         photoFormData,
                         {
                             headers: {
-                                'Content-Type': 'multipart/form-data'
+                                'Content-Type': 'multipart/form-data',
+                                'Authorization': `Bearer ${token}`
                             }
                         }
                     );
